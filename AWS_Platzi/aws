@@ -1,0 +1,62 @@
+*5 caracteristicas de la computacion en la nube
+    -autoservicio en demanda 
+    -amplio acceso a la red
+    -multiples inquilinos
+    -elasticidad y escalabilidad
+    -sevicio medido
+
+
+Iaas: infraestructura como servicio
+Pass: Plataforma como servicio
+SaaS: Sofware como servicio
+
+zona de disponibilidad = un data center o varios centros de datos 
+
+infraestructura global:
+    AWS REGIONES
+    AWS ZONAS DE DISPONIBILIDAD 
+    AWS CENTROS DE DATOS 
+    UBICACIONES DE AWS EDGE / PUNTOS DE PRESENCIA
+
+Servicios Globales:
+    IAM
+    Route 53
+    CloudFront
+    WAF
+Servicios regionnales:
+    EC2
+    Beanstalk
+    Lambda
+    Rekognition
+
+seguridad e integridad:
+    Amazon Macie
+    AWS Key management service
+    AWS CloudHSM
+    AWS Certificate Manager 
+    AWS Secret Manager
+
+Proteccion de infraestructura:
+    AWS Shield
+    AWS WEB application firewall WAF
+    AWS Firewall Manager
+
+Deteccion de amanezas:
+    amanzon guardDuty
+    Amazon inspector
+    Amazon config
+    Amazon CloudTrail
+
+Gestion de identidades:
+    IAM identity and access management
+    AWS isino de sesion unico 
+    Amazon cognito
+    AWS servicio de directorio
+    AWS Organizaciones
+
+IAM:   nos ayuda a adminsitrar quienes pueden acceder a qué en los servicios y recursos de la cuenta aws 
+        puedes crear usuarios y grupos
+        establecer permisos para permitir o denegar el acceso a los recursos de AWS mediante el uso de politicas
+
+USUARIO:
+        ROOT USER   
