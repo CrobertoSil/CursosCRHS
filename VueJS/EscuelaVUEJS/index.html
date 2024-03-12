@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="favorites">
+
+        </div>
+        <article class="content">
+            <h1 class="content__title">
+                {{ message}}
+            </h1>
+            <form action="" class="search">
+                <input type="text" class="search__input" required placeholder="Search github users">
+                <input type="submit" class="search__submit" value="Search">
+            </form>
+            <div class="result__error"></div>
+        </article>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+        const mountedApp = app.mount("#app")
+    </script>
+</body>
+</html>
+
+
+<script>
+    console.log
+</script>

@@ -1,0 +1,156 @@
+Curso JS bluuweb
+
+https://bluuweb.github.io/javascript/fundamentos/
+
+
+vuejs
+https://bluuweb.github.io/vue-udemy/30-01-fundamentos/
+
+
+Hola, les dejo un ejemplo de dos v-for anidados utilizando template.
+
+<template>
+  <div>
+    <h2>Lista de usuarios:</h2>
+    <ul>
+      <template
+        v-for="(user, index) in users"
+        :key="user.id"
+      >
+        <li>
+          <h3>{{ user.name }}</h3>
+          <ul>
+            <template
+              v-for="(post, index) in user.posts"
+              :key="post.id"
+            >
+              <li>{{ post.title }}</li>
+            </template>
+          </ul>
+        </li>
+      </template>
+    </ul>
+</div>
+</template>
+ 
+<script setup>
+const users = [
+  {
+    id: 1,
+    name: 'Juan',
+    posts: [
+      { id: 1, title: 'Mi primer post' },
+      { id: 2, title: 'Mi segundo post' },
+    ]
+  },
+  {
+    id: 2,
+    name: 'Maria',
+    posts: [
+      { id: 3, title: 'Mi tercer post' },
+      { id: 4, title: 'Mi cuarto post' },
+    ]
+  }
+]
+</script>
+
+
+APP.VUE
+<script setup>
+const name = "Vue Dinamico";
+const styleColor = "color : white";
+const arrayColores = ["red", "peru"];
+const activo = null;
+// const arrayFrutas2 = ["🍎", "🍌", "🍉", "🍓", "🍒"];
+
+const arrayFrutas = [
+  {
+    name: "Manzana",
+    price: "$1.00",
+    description: "Una manzana",
+  },
+  {
+    name: "Pera",
+    price: "$2.00",
+    description: "Una pera",
+  },
+  {
+    name: "Naranja",
+    price: "$3.00",
+    description: "Una naranja",
+  },
+];
+
+const objetoFruta = {
+  name: "Naranja",
+  price: "$3.00",
+  description: "Una naranja",
+  id: 1,
+};
+
+const arrayFrutas2 = [
+  {
+    name: "Manzana",
+    price: "$1.00",
+    description: "Una manzana",
+    stock: 0,
+  },
+  {
+    name: "Pera",
+    price: "$2.00",
+    description: "Una pera",
+    stock: 10,
+  },
+  {
+    name: "Naranja",
+    price: "$3.00",
+    description: "Una naranja",
+    stock: 20,
+  },
+];
+</script>
+
+<template>
+<ul>
+  <template v-for="item in arrayFrutas2" :key="item.name">
+    <li v-if="item.stock">{{ item.name }} - {{ item.price }}</li>
+  </template>
+</ul>
+
+<br>
+<br>
+  <ul>
+    <li v-for="(value, propiedad, index) in objetoFruta" :key="value">
+      {{ index }} - {{ propiedad }}: {{ value }}
+    </li>
+  </ul>
+
+  <br />
+  <ul>
+    <li v-for="frutas in arrayFrutas" :key="frutas.name">
+      {{ frutas.name }}-{{ frutas.price }}
+    </li>
+  </ul>
+
+  <!-- <ul>
+    <li v-for="(fruta, index) in arrayFrutas2" :key="index">{{ index }}-{{ fruta }}</li>
+  </ul> -->
+
+  <h1>Hola {{ name.toUpperCase() }}</h1>
+  <h2>{{ arrayColores }}</h2>
+  <h2 :style="styleColor">Soy Blanco</h2>
+  <h2 :style="`color: ${arrayColores[1]}`">Soy Peru</h2>
+  <!-- <h2> -->
+  <!-- operador ternario para if -->
+  <!-- {{ activo ? "Estoy Activo" : "Estoy Inactivo"}} -->
+  <!-- </h2> -->
+  <h2 v-if="activo === true">Estoy Activo</h2>
+  <p v-else-if="activo === false">Estoy inactivo</p>
+  <p v-else>Estoy indeciso</p>
+</template>
+
+<style>
+h1 {
+  color: blue;
+}
+</style>
