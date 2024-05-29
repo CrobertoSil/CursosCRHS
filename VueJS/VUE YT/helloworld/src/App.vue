@@ -5,8 +5,11 @@
   <CounterComposition/> 
     <ExampleSelective />
     <ExampleFor />
-    <ClassBind/>-->
+    <ClassBind/>
     <ModelForm/>
+    <CycleOption/>
+    <PostList/>-->
+    <ComputedExample/>
 
 
 </template>
@@ -18,7 +21,10 @@
   // import ExampleSelective from './components/ExampleSelective.vue';
   // import ExampleFor from './components/ExampleFor.vue';
   // import ClassBind from './components/ClassBind.vue';
-  import ModelForm from './components/ModelForm.vue'; 
+  // import ModelForm from './components/ModelForm.vue'; 
+  // import CycleOption from './components/CycleOption.vue';
+  // import PostList from './components/PostList.vue';
+  import ComputedExample from './components/ComputedExample.vue';
 
 </script>
 
